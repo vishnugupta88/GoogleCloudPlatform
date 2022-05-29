@@ -1,0 +1,24 @@
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
+[google-cloud-cli]
+name=Google Cloud CLI
+baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el8-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+       https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOM
+
+
+ sudo yum install -y yum-utils
+ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/rhel/docker-ce.repo
+    
+    https://download.docker.com/linux/rhel/7/source/stable/Packages/docker-ce-19.03.10-3.el7.src.rpm
+     curl -fsSL https://get.docker.com -o get-docker.sh
+ sudo sh get-docker.sh
+ 
+ https://download.docker.com/linux/rhel/7/source/stable/Packages/docker-ce-cli-19.03.10-3.el7.src.rpm
