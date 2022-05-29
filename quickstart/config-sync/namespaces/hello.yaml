@@ -15,7 +15,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: acm-demo
+  name: asm-demo
   annotations:
     configsync.gke.io/cluster-name-selector: cluster-gke
 # [END anthos_config_management_quickstart_namespaces_hello_namespace] 
